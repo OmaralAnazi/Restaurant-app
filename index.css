@@ -11,6 +11,10 @@ p, h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
 
+button {
+    cursor: pointer;
+}
+
 .container {
     display: block;
     width: 720px;
@@ -22,6 +26,14 @@ p, h1, h2, h3, h4, h5, h6 {
 /* Utility classes */
 .margin-left-auto {
     margin-left: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 /* Header style section */
@@ -135,6 +147,10 @@ hr {
     font-size: 20px;
 }
 
+.remove-meal:hover {
+    color: #2c2c2c;
+}
+
 .black-line {
     border-bottom: 2px solid #393333;
 }
@@ -154,5 +170,117 @@ hr {
 }
 
 .complete-order:active {
+    transform: translateY(2px);
+}
+
+/* Credit Card Section Style*/
+
+#credit-card-window {
+    width: 580px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    border-radius: 5px;
+    background-color: whitesmoke;
+    font-family: Verdana, sans-serif;
+    padding: 25px;
+    box-shadow: 1px 1px 120px gray, -1px -1px 120px gray;
+}
+
+.close-btn {
+    width: 30px;
+    height: 30px;
+    color: gray;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: whitesmoke;
+    border: 1px solid gray;
+    border-radius: 50%;
+    margin-left: auto;
+}
+
+.close-btn:hover {
+    color: white;
+    background-color: red;
+}
+
+.credit-card-form-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+    margin-top: 30px;
+    margin-bottom: 75px;
+}
+
+#credit-card-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.credit-card-inputs,
+.pay-btn {
+    justify-self: stretch;
+    height: 50px;
+    font-size: xx-large;
+    border: 2px solid #757575;
+    border-radius: 6px;
+    padding: 10px 20px;
+}
+
+.pay-btn {
+    height: 75px;
+    color: white;
+    border: none;
+    background: #16DB99;
+    margin-top: 30px;
+}
+
+.pay-btn:hover {
+    background-color: #0a895f;
+}
+
+.pay-btn:active {
+    transform: translateY(2px);
+}
+
+/* Finish Ordering State style */
+
+.successful-payment-state {
+    text-align: center;
+}
+
+.sub-container {
+    width: 520px;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+
+.successful-message {
+    font-size: 32px;
+    color: #065F46;
+    background: #ECFDF5;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+#confirm-receiving-btn {
+    font-size: 22px;
+    font-family: Verdana, sans-serif;
+    height: 75px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    background: #16DB99;
+    padding: 10px 30px;
+    margin: 30px 0 150px;
+}
+
+#confirm-receiving-btn:hover {
+    background-color: #0a895f;
+}
+
+#confirm-receiving-btn:active {
     transform: translateY(2px);
 }
