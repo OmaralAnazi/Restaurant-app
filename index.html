@@ -22,53 +22,14 @@
         </header>
 
         <main>
-
             <section id="menu-section">
-                <!-- <div class="container">
-                    <div class="flex-box">
-                        <p class="meal-emoji">🍕</p>
-                        
-                        <div class="meal-details">
-                            <h2 class="meal-name">Pizza</h2>
-                            <p class="meal-ingredients">pepperoni,mushrom,mozarella</p>
-                            <h3 class="meal-price">$14</h3>
-                        </div>
-                            
-                        <button class="increase-btn">+</button>
-                    </div>
-                    <hr>
-                </div> -->
-
-
-
+                <!-- Feeded by js -->
             </section>
-
             <section id="ordering-section">
-                <!-- <div class="container">
-                    <div class="order-elements">
-                        <h3 class="order-title">Your order</h3>
-
-                        <div class="meal-order-info">
-                            <p>2x Pizza</p>
-                            <button class="remove-meal">remove</button>
-                            <p class="margin-left-auto">$14</p>
-                        </div>
-
-                        <hr class="black-line">
-
-                        <div class="meal-order-info">
-                            <p>Total price:</p>
-                            <p class="margin-left-auto">$14</p>
-                        </div>
-
-                        <button class="complete-order">Complete order</button>
-
-                    </div>
-                </div> -->
+                <!-- Feeded by js -->
             </section>
-
         </main>
-
+        
         <div id="credit-card-window" class="hidden">
             <button class="close-btn" id="close-payment-btn">X</button>
             <h1 class="credit-card-form-title">Enter Card Details</h1>
@@ -77,16 +38,19 @@
                 placeholder="Enter your name" pattern="[a-zA-Z ]{1,}" 
                 name="username" required>
                 <input class="credit-card-inputs" type="text"
-                 placeholder="Enter card number" pattern="[0-9]{1,}"
-                 name="card-number" required>
+                    placeholder="Enter card number" pattern="[0-9]{1,}"
+                    name="card-number" required>
                 <input class="credit-card-inputs" type="text"
-                 placeholder="Enter CVV" pattern="[0-9]{3}"
-                 name="cvv" required>
+                    placeholder="Enter CVV" pattern="[0-9]{3}"
+                    name="cvv" required>
                 <button class="pay-btn">Pay</button>
             </form>
         </div>
 
-        <!-- Window! -->
+        <div id="happy-meal-window" class="hidden">
+            <button class="close-btn" id="close-happy-meal-btn">X</button>
+            <h1 class="happy-meal-message">Thanks for your trust! <br> Happy meal 💚</h1>
+        </div>
 
         <script src="index.js"></script>
     </body>

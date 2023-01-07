@@ -182,7 +182,7 @@ hr {
     left: 50%;
     transform: translate(-50%, -50%); 
     border-radius: 5px;
-    background-color: whitesmoke;
+    background-color: #ecf0f1;
     font-family: Verdana, sans-serif;
     padding: 25px;
     box-shadow: 1px 1px 120px gray, -1px -1px 120px gray;
@@ -283,4 +283,32 @@ hr {
 
 #confirm-receiving-btn:active {
     transform: translateY(2px);
+}
+
+/* Processing Payment Window Style */
+
+#form-processing-state {
+    text-align: center;
+    font-size: 25px;
+    padding: 133px 0;
+}
+
+/* Happy Meal Window Style */
+
+#happy-meal-window {
+    width: 580px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    border-radius: 5px;
+    background-color: #ecf0f1;
+    font-family: Verdana, sans-serif;
+    padding: 25px;
+    box-shadow: 1px 1px 120px gray, -1px -1px 120px gray;
+}
+
+.happy-meal-message {
+    text-align: center;
+    padding: 30px;
 }

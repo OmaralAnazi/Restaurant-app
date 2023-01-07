@@ -25,17 +25,34 @@ const menuSection = document.getElementById('menu-section')
 const orderingSection = document.getElementById('ordering-section')
 const creditCardWindow = document.getElementById('credit-card-window')
 const creditCardForm = document.getElementById('credit-card-form') 
+const happyMealWindow = document.getElementById('happy-meal-window')
 let userMealsBasket = []
 
 creditCardForm.addEventListener('submit', e => {
     e.preventDefault()
 
-    hideCreditCardWindow()
     let username = new FormData(creditCardForm).get('username')
     userMealsBasket = []
     creditCardForm.reset()
-    showConfirmOrderMessage(username)
+    validateCreditCardAnimation(username)
+    
 })
+
+function validateCreditCardAnimation(username) {
+    let oldHtml = creditCardWindow.innerHTML
+    let htmlAnimation = `
+    <div id="form-processing-state" class="">
+        <img class="process-animation-img" src="images/process-animation.gif" alt="process animation">
+        <h3>processing the payment...</h3>
+    </div>`
+    creditCardWindow.innerHTML = htmlAnimation
+    setTimeout(function() {
+        creditCardWindow.innerHTML = oldHtml
+        hideCreditCardWindow()
+        showConfirmOrderMessage(username)
+    }, 3000)
+
+}
 
 function showConfirmOrderMessage(username) {
     disableMainBtns()
@@ -76,7 +93,10 @@ document.addEventListener('click', e => {
             hideCreditCardWindow()
             break
         case "confirm-receiving-btn":
-            confirmReceivingOrder()
+            showHappyMealMessage()
+            break
+        case "close-happy-meal-btn":
+            hideHappyMealMessage()
             break
     }
 })
@@ -138,9 +158,14 @@ function enableMainBtns() {
     })
 }
 
-function confirmReceivingOrder() {
-    enableMainBtns()
+function showHappyMealMessage() {
     renderOrder()
+    happyMealWindow.classList.remove('hidden')
+}
+
+function hideHappyMealMessage() {
+    enableMainBtns()
+    happyMealWindow.classList.add('hidden')
 }
 
 function getMenuHtml() {
